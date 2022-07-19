@@ -5,6 +5,9 @@ const Search = ({onSearchChange}) => {
 
         const [search, setSearch] = useState(null);
 
+        const loadOptions = (inputValue) => {
+            
+        }
         const handleSearchChange = (searchData) => {
             setSearch(searchData);
             onSearchChange(searchData);
@@ -16,6 +19,7 @@ const Search = ({onSearchChange}) => {
             debounceTimeout={600}
             value={search}
             onChange={handleSearchChange}
+            loadOptions={loadOptions}
         />
     );
 }
